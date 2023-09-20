@@ -1,0 +1,47 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Hello World</h1>
+        <h1 class="a">Hello</h1>
+        <h2 class="a">Edupoly</h2>
+        <p class="b">Training</p>
+        <Ul id="ul">
+            <li>Apple</li>
+            <li>Mango</li>
+             <li>Orange</li>
+        </Ul>
+
+        <script>
+            //Q1
+           var x=document.querySelector("h1")
+            console.log(x.innerHTML)
+            console.log(typeof(x.innerHTML))
+            console.log(x.innerHTML.toUpperCase())
+            x.innerHTML=(""||"hi")
+            //Q2
+            /*var y=document.querySelectorAll('.a')
+            y.forEach(function(el){
+            console.log(el.innerHTML)
+            })*/
+            //Q3
+            /*var z=["apple","Mango","Orange"]
+            z.forEach(function(element){
+                var b=document.createElement("li")
+                b.innerHTML=element
+                ul.appendChild(b)
+            })*/
+            //Q4
+           /*var a=document.querySelectorAll("li")
+            var c=[]
+            a.forEach(function(element)
+            {
+                c.push(element.innerHTML)
+            })
+            console.log(c)*/
+            
+
+        </script>
+    </body>
+</html>

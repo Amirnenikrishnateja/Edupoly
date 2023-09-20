@@ -1,0 +1,45 @@
+<html>
+    <head></head>
+    <body>
+        <div id="div1" style="text-align: center;">
+
+        </div>
+        <script>
+            var div=document.getElementById("div1")
+            // document.body.appendChild(div)
+            var h1=document.createElement("h1")
+            h1.innerHTML="Like and Dislike button"
+            h1.style.color="red"
+            h1.style.textAlign="center"
+            div.appendChild(h1)
+            var body=document.querySelector("body")
+            body.style.backgroundColor="lightyellow"
+            var b1=document.createElement("button")
+            b1.innerHTML="LIKE"
+            b1.style.background="green"
+           
+            var count=1;
+            var likecount=document.createElement("span")
+            b1.onclick=function(){   
+            s.innerHTML=count++
+            }
+            div.appendChild(b1)
+            var s=document.createElement('span')
+            s.innerHTML=0
+            div.appendChild(s)
+            var br1=document.createElement("br")
+            div.appendChild(br1)
+            var b2=document.createElement("button")
+            b2.innerHTML="DISLIKE"
+            var count1=1
+            b2.onclick=function(){
+                s2.innerHTML=count1++
+            }                        
+            s2=document.createElement("span")
+            b2.style.background="red"
+            s2.innerHTML = 0
+            div.appendChild(b2)
+            div.appendChild(s2)
+        </script>
+    </body>
+</html>

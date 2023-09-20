@@ -1,0 +1,269 @@
+<html>
+  <head> </head>
+  <body>
+    <script>
+      /*var ar=[ 67,41,12,9,98,21]
+        for(var i=1;i<ar.length;i++){
+            var temp=ar[i];
+            var j=i-1;
+            while((j>-1)&&(temp<ar[j]))
+            {
+                ar[j+1]=ar[j];
+                j--;
+            }
+            ar[j+1]=temp;
+        }
+        console.log(ar);*/
+
+      //Level 2
+      //1)For the Given array: [23,34,54,10,4,7] print the minimum number in an Array. Expected output: 4
+      /*   var ar=[23,34,54,10,4,7];
+        var c=Infinity
+        for(var i=0;i<ar.length;i++){
+            if(c>ar[i]){
+            c=ar[i]}
+
+        }
+        console.log("minimum number in array is "+c)*/
+
+      //2)For the Given array: [23,34,54,10,4,7] print the Maximum number in an array. Expected output: 54
+      /*var ar=[23,34,54,10,4,7];
+        var c=-Infinity
+        for(var i=0;i<ar.length;i++){
+            if(c<ar[i]){
+            c=ar[i]}
+
+        }
+        console.log(c)  */
+
+      //3)For the Given array: [23,34,54,10,4,7] sum of all the numbers in an Array. Expected output: 132
+      /*var ar=[23,34,54,10,4,7];
+        var c=0
+        for(var i=0;i<ar.length;i++){  
+            c=c+ar[i]
+        }
+        console.log("sumation of all number in array is "+c)*/
+
+      //4)For the Given array: [23,34,54,10,4,7] Average of all the numbers in an Array. Expected output: 22
+      /*var ar=[23,34,54,10,4,7];
+        var c=0
+        for(var i=0;i<ar.length;i++){  
+            c=c+ar[i]
+        }
+        console.log("average of all number in array is "+(c/i))*/
+
+      //5)For the Given array: [23,34,54,10,4,7] search if the given number is there in an array or not. Given number: 34, Expected output: true Given number: 26, Expected output: false
+      /*var ar=[23,34,54,10,4,7];
+        var c=+prompt()
+        count=0
+        for(var i=0;i<ar.length;i++){  
+            if(c==ar[i])
+            {
+               count++ 
+            }
+        }
+        if(count>=1)
+        {
+            console.log("True")
+        }
+        else{
+            console.log("false") 
+        }*/
+
+      //6)For the Given array: [23,34,54,10,34,7,23,10,34] print the total number of times an element found in the array. Given number: 23, Expected output: 2 Given number: 34, Expected output: 3 Given number: 10, Expected output: 2 Given number: 54, Expected output: 1
+      /*var ar=[23,34,54,10,34,7,23,10,34]
+var x=+prompt()
+count=0
+for(var i=0;i<ar.length;i++)
+        if(ar[i]==x)
+        {
+            count++
+        }
+        console.log(count)
+ */
+
+      //7)For the Given array: [23,34,54,10,4,7] print index of a given element in an Array. Given number: 23, Expected output: 0 Given number: 34, Expected output: 1 Given number: 10, Expected output: 3 Given number: 54, Expected output: 2
+      /*var ar=[23,34,54,10,4,7]
+var x=+prompt()
+count=0
+for(var i=0;i<ar.length;i++)
+        if(ar[i]==x)
+        {
+            console.log(i)
+        }
+ */
+      //8) a program to store an array into another array var ar = [23,34,54,10,4,7] var br = [ ] Expected output: br = [23,34,54,10,4,7]
+      /*var ar = [23,34,54,10,4,7] 
+var br = [ ]
+for(var i=0;i<ar.length;i++){
+    br[i]=ar[i]
+}
+console.log(br)*/
+      //9)Sort an array in ascending order. Given array: [23,34,54,10,4,7] Expected output: 4,7,10,23,34,54
+      /*var ar=[23,34,54,10,4,7];
+for(var i=0;i<=ar.length-1;i++){
+    for(var j=0;j<=ar.length-i-1;j++){
+        if(ar[j]>ar[j+1])
+        {
+            var temp=ar[j]
+            ar[j]=ar[j+1]
+            ar[j+1]=temp
+        }
+    }
+}
+console.log(ar)*/
+      //Store only even numbers of a given array in another array.
+      /*var ar=[23,34,54,10,4,7];
+var ar1=[];
+for(var i=0;i<ar.length;i++){
+    if(ar[i]%2==0)
+        ar1.push(ar[i])
+}
+console.log(ar1)*/
+      //11)print only the perfect squares in an array
+      /*var ar=[21,25,9,12,36]
+var br=[]
+for(var i=0;i<5;i++)
+{
+    if(parseInt(ar[i]**(1/2))===ar[i]**(1/2))
+        br.push(ar[i])
+}
+    console.log(br)*/
+ 
+    
+//12)Given two arrays. Compare the arrays and print the element which is not there in array 2."
+      /*var ar = [1, 2, 3, 4, 5];
+      var br = [1, 2, 3, 4, 6];
+      
+      for (var i = 0; i < ar.length; i++) {
+        var count = false;
+        for (var j = 0; j < br.length; j++) {
+          if (ar[i] === br[j]) {
+            count = true;
+            break;
+          }
+          
+        }
+        if (count !== true) {
+            console.log(ar[i]);
+          }
+      }*/
+
+
+//13)Find the second largest number in an array.
+     /* var ar=[1,2,3,4,5,6]
+      var c=-Infinity
+      var b=-Infinity
+      for(var i=0;i<ar.length;i++)
+      {
+        for
+        {
+
+        c=ar[i]
+        }
+      }*/
+
+      /*var ar = [1,2,3,4,4,5];
+      var br=[];
+      
+      for (var i = 0; i < ar.length; i++) {
+       var count = 0;
+        for (var j = 0; j < ar.length; j++) {
+           count=0
+          if (ar[i] === ar[j]) {
+            count ++; 
+          }
+          console.log(count)
+        }
+        if (count>=2) {    
+            br.push(ar[i]);
+         }
+         
+      }
+      console.log(br)*/
+//13)Find the second largest number in an array.
+/*      var ar=[10,1,2,5,7,9]
+      var b=-Infinity
+      var c=-Infinity
+      for(var i=0;i<ar.length;i++)
+      {
+        if(c<ar[i])
+        {
+          c=ar[i]
+        }
+          if(b<ar[i]&&ar[i]<c)
+          {
+            b=ar[i]
+          }
+      }
+      console.log(b)
+*/
+//14)Check whether the given two strings are anagrams or not.
+/*var str1=prompt()
+var str2=prompt()
+
+for(var i=0;i<str1.length;i++)
+{
+  var value=false
+  for(var j=0;j<str2.length;j++){
+    if(str1[i]===str2[j])
+    {
+      value=true;
+      break
+    }
+  }
+  
+}
+if(value===true)
+  {
+    console.log("ananogram")
+  }
+  else
+  {
+    console.log("not ananogram")
+
+  }*/
+//15)Reverse of string without using built-in methods.
+/*var str1=prompt()
+var str2=""
+for(var i=str1.length-1;i>=0;i--)
+{
+  str2=str2+str1[i]
+}
+console.log(str2)
+*/
+//16)Count the number of vowels and consonants in a given string.
+// wrong method and answer
+/*var str1=prompt()
+var str2="aeiouAEIOU"
+var count=0
+var count2=0
+for(var i=0;i<str1.length;i++)
+{
+  var count1=true
+  for(var j=0;j<str2.length;j++)
+  {
+    if(str1[i]==str2[j])
+    {
+      count++
+    }
+    if(str1[i]!=str2[j])
+      {
+        count1=false
+      
+      }
+    if(count!=true)
+    {
+      count2++
+    }
+    
+  }
+  
+}
+console.log("No of vowels "+count)
+console.log("No of consonent "+count2)*/
+
+
+    </script>    
+  </body>
+</html>

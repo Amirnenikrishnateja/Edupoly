@@ -1,0 +1,32 @@
+<html>
+    <head></head>
+    <body>
+        
+        <button onclick="red(event)">red</button>
+        <button onclick="green(event)">green</button>
+        <button onclick="yellow(event)">yellow</button>
+        <button onclick="blue(event)">blue</button>
+        <div id="box" style="height:100px;width:100px;border:2px solid">
+
+        </div>
+        <script>
+            var box=document.getElementById("box")
+            function red(ev)
+            {
+             box.style.backgroundColor="red"   
+            }
+            function blue(ev)
+            {
+             box.style.backgroundColor="blue"   
+            }
+            function yellow(ev)
+            {
+             box.style.backgroundColor="yellow"   
+            }
+            function green(ev)
+            {
+            box.style.backgroundColor="green"
+            }
+        </script>
+    </body>
+</html>

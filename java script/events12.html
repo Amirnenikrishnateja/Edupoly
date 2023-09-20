@@ -1,0 +1,53 @@
+<html>
+    <head></head>
+    <body>
+        <div>
+
+        </div>
+        <Script>
+            var box=document.querySelector("div")
+            var img1=document.createElement("img")
+            img1.src="https://www.usatoday.com/gcdn/presto/2019/06/23/USAT/c3a9f051-bd6c-4b39-b5b9-38244deec783-GettyImages-932651818.jpg?width=660&height=517&fit=crop&format=pjpg&auto=webp"
+            img1.style.height="193px"
+            img1.style.width="193px"
+            var img2=document.createElement("img")
+            img2.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt4GKYOyAkHsYFDjOb-JEpYrzTfUBvRhfWYA&usqp=CAU"
+            img2.style.height="193px"
+            img2.style.width="193px"
+            var img3=document.createElement("img")
+            img3.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRiqgxYlZz5KezMf0gktFSncEqNA0Hg7pp5g&usqp=CAU"
+            img3.style.height="193px"
+            img3.style.width="193px"
+            box.appendChild(img1)
+            box.appendChild(img2)
+            box.appendChild(img3)
+            var br=document.createElement("br")
+            box.appendChild(br)
+            img4=document.createElement("img")
+            //img4.src="https://www.usatoday.com/gcdn/presto/2019/06/23/USAT/c3a9f051-bd6c-4b39-b5b9-38244deec783-GettyImages-932651818.jpg?width=660&height=517&fit=crop&format=pjpg&auto=webp"
+            img4.style.height="600px"
+            img4.style.width="580px"
+        
+            box.appendChild(img4)
+           /* img1.onmouseover=fn
+            img2.onmouseover=fn
+            img3.onmouseover=fn
+            img1.onclick=fn(event)*/
+            img1.onmouseover=function(){
+                img4.src="https://www.usatoday.com/gcdn/presto/2019/06/23/USAT/c3a9f051-bd6c-4b39-b5b9-38244deec783-GettyImages-932651818.jpg?width=660&height=517&fit=crop&format=pjpg&auto=webp"
+            }
+            img2.onmouseover=function(){
+            img4.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt4GKYOyAkHsYFDjOb-JEpYrzTfUBvRhfWYA&usqp=CAU"
+            }
+            img3.onmouseover=function(){
+            img4.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRiqgxYlZz5KezMf0gktFSncEqNA0Hg7pp5g&usqp=CAU"
+            }
+            var fn= function(e){
+                console.log(e)
+               // b=e.target.src
+                //img4.src=b
+            }
+            box.style.textAlign="center"
+        </Script>
+    </body>
+</html>

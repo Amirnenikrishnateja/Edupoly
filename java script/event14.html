@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+    <LAbel>image url</LAbel>
+    <input type="text"placeholder="image url" id="image">
+        <br>
+    <button style="text-align:center; background-color: yellow;">ADD IMAGE</button>
+    <div></div>
+    <script>
+        var imgurl=document.getElementById("image")
+        var list=document.querySelector("div")
+        var but=document.querySelector("button")
+        var y=[]
+        but.onclick=function(){
+            var a=imgurl.value
+            y.push(a)    
+            image() 
+                 
+        }
+        function image(){
+            list.innerHTML=""
+            y.forEach(function(b){
+            var image=document.createElement("img")
+            image.src=b
+            list.appendChild(image)
+             
+
+            console.log(y)
+            })  
+        }
+    </script>
+    </body>
+</html>

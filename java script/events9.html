@@ -1,0 +1,40 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+
+        </div>
+        <script>
+        var box=document.querySelector("div")
+        var div=document.createElement("div")
+        box.style.textAlign="center"
+        div.style.margin="auto"
+        div.style.border="2px solid"
+        div.style.height="300px"
+        div.style.width="300px"
+        box.appendChild(div)
+        var b1=document.createElement("button")
+        b1.innerHTML="ON"
+        box.appendChild(b1)
+        var b2=document.createElement("button")
+        b2.innerHTML="OF"
+        box.appendChild(b2)
+        b1.onclick=function()
+        {
+            div.style.backgroundColor="YELLOW"
+            b1.style.background="red"
+            b2.style.background="white"
+        }
+        b2.onclick=function()
+        {
+            div.style.backgroundColor="white"
+            b2.style.background="red"
+            b1.style.background="white"
+        }
+        var body=document.querySelector("body")
+        body.style.backgroundColor="lightyellow"
+        </script>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+        /*    var person = {
+                                "firstName" : "Harry",
+                                "lastName" : "Potter",
+                                "age": 30,
+                                "gender": "male",
+                                "skill" : "ReactJS",                                
+                                "expertise": "Beginner"
+                            };
+        console.log("print the first name")
+        console.log(person['firstName'])
+        console.log("print the last name")
+        console.log(person['lastName'])
+        console.log("Print the fullname(harrypoter)")
+        console.log(person['firstName']+person['lastName'])
+        console.log("If the age is less than 18, then print false If the age is more than 18, then print ")
+        if(person['age']<18)
+        console.log("false")
+        else
+        console.log("true")
+    */
+    var marks ={
+                "maths" : 34,
+                "english" : 56,
+                "science": 32,
+                "hindi" : 75,
+                "social science": 65
+                };
+             /*   {
+                    "maths":+prompt(),
+                    "english":+prompt(),
+                    "science":+prompt(),
+                    "hindi":+prompt(),
+                    "social science":+prompt()
+
+                };*/
+        console.log("print marks of all subjects")
+        for(var k in marks)
+        console.log(marks[k])
+        console.log("print names of all subjects")
+        for(var k in marks)
+        console.log(k)
+        console.log("Count the number of subjects from the given object")
+    //  console.log(Object.keys(marks).length)
+        count=0
+        for(var k in marks){
+        count++
+        }
+        console.log(count)
+        console.log("Print the percentage of the marks of the student.")
+        count=0
+        for(var k in marks){
+        count=(count+marks[k])}
+        console.log(count/500*100)
+
+        console.log("Print only those subjects where the student scored more than 35.")
+        for(var k in marks)
+            if(marks[k]>35)
+            console.log(marks[k])
+
+        console.log("pass or fail")
+            for(var k in marks)
+            if(marks[k]>35)
+            console.log("pass")
+            else
+            console.log("fail")
+
+        console.log("pass subjects")
+        for(var k in marks)
+            if(marks[k]>35)
+            console.log(k)
+
+        console.log("no of pass subjects")
+        count=0
+        for(var k in marks)
+            if(marks[k]>35)
+            count++
+            console.log(count)
+        console.log("fail subjects")
+            for(var k in marks)
+            if(marks[k]<35)
+            console.log(k)
+        console.log("no of failed subjects")
+        count=0
+        for(var k in marks)
+            if(marks[k]<35)
+            count++
+            console.log(count) 
+       // console.log("least scored")
+       
+        count=marks['hindi']
+        for(var k in marks)
+            if(count>=marks[k]){
+            count=marks[k]
+            c=k}
+            console.log(c)
+
+      //  console.log("highest scored")
+        count=marks['maths']
+        for(var k in marks)
+            if(count<=marks[k]){
+            count=marks[k]
+            c=k}
+            console.log(c)
+            console.log(count)
+    //    console.log("13 pass or fail oin all subjets")
+        for(var k in marks)
+            count=0
+        
+            if(marks[k]>=35)
+            count++
+            if(count==5)
+            console.log("pass")
+            else
+            console.log("fail")
+
+
+        console.log('pass or fail in  subjects')
+        j=prompt("subject name")
+        console.log(marks[j])
+       // count=0
+        //for(var j in marks)
+            if(marks[j]>=35)
+            /*count++
+            if(count==5)*/
+            console.log("pass")
+            else
+            console.log("fail")        
+        </script>
+    </body>
+</html>

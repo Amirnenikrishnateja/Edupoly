@@ -1,0 +1,78 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button id="hi">hey</button>
+        <table id="tb" border="2" cellspacing="10">
+        
+        </table>
+
+
+        <script>
+            var display = [];
+             fetch('https://restcountries.com/v3.1/all')
+             .then(function(res){
+                res.json()
+            .then(function(data){
+                  display=data
+                  console.log(display)
+                  
+                
+                })
+            })
+            var bt=document.getElementById("hi")
+            bt.onclick=function(){
+            var table=document.getElementById("tb")
+            table.innerHTML=""
+            var tr=document.createElement("tr")
+            var td1=document.createElement("td")
+            var td2=document.createElement("td")
+            var td3=document.createElement("td")
+            var td4=document.createElement("td")
+            var td5=document.createElement("td")
+            var td6=document.createElement("td")
+            td1.innerHTML="name"
+            td2.innerHTML="capital"
+            td3.innerHTML="population"
+            td4.innerHTML="area"
+            td5.innerHTML="border"
+            td6.innerHTML="flag"
+            tr.appendChild(td1)
+            tr.appendChild(td2)
+            tr.appendChild(td3)
+            tr.appendChild(td4)
+            tr.appendChild(td5)
+            tr.appendChild(td6)
+            table.appendChild(tr)
+           display.forEach(function(a) {
+            var tr1=document.createElement("tr")
+            var td11=document.createElement("td")
+            var td21=document.createElement("td")
+            var td31=document.createElement("td")
+            var td41=document.createElement("td")
+            var td51=document.createElement("td")
+            var td61=document.createElement("td")
+            var img=document.createElement("img")
+            td11.innerHTML=a.name.common;
+            td21.innerHTML=a.capital;
+            td31.innerHTML=a.population;
+            td41.innerHTML=a.area;
+            td51.innerHTML=a.borders;
+            img.src=a.flags.svg
+            img.style.width="50px"
+            img.style.height='50px'
+            td61.appendChild(img)           
+            tr1.appendChild(td11)
+            tr1.appendChild(td21)
+            tr1.appendChild(td31)
+            tr1.appendChild(td41)
+            tr1.appendChild(td51)
+            tr1.appendChild(td61)
+            table.appendChild(tr1)
+            })
+        }
+
+        </script>
+    </body>
+</html>

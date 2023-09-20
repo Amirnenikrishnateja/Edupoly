@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <script type="text/babel">
+        function rad(e){
+            document.getElementById("h1").innerHTML=e.target.value
+        }
+    var div=<div >
+            <input type="radio" name="a"  onChange={rad}/>hello
+            <input type="radio" name="a" onChange={rad}/>hey
+           
+            <h1 id="h1"></h1>
+            </div>
+    ReactDOM.render(div,document.body)
+    </script>
+</body>
+</html>

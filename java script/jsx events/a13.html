@@ -1,0 +1,17 @@
+<html>
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <script type="text/babel">
+    var div=<div >
+            <input id ="a"type="text"/>
+            <button onClick={(e)=>document.getElementById("a").value=""} >dont touch me</button>
+            <h1 id="h1"></h1>
+            </div>
+    ReactDOM.render(div,document.body)
+    </script>
+</body>
+</html>

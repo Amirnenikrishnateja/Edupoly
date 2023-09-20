@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id ="d">
+
+        </div>
+        <script type="text/babel">
+         const Todolist=()=>{
+            var index;
+            var[t,sett]=React.useState([])
+            function add(){
+                var b=document.getElementById("d1").value
+                sett([...t,b])
+                document.getElementById("d1").value=""
+            }
+            function abc(a){
+                var ar=[...t]
+                ar.splice(a,1)
+                sett(ar)
+            }
+            function update(i){
+                 var ar=[...t]
+                document.getElementById("d1").value=ar[i]
+                document.getElementById("del").style.display="none"
+                document.getElementById("upt").style.display="block"
+                index=i
+
+            }
+            function alter()
+            {   
+                var br=[...t]
+                br[index]=document.getElementById("d1").value
+                
+                sett(br)
+                document.getElementById("del").style.display="block"
+                document.getElementById("upt").style.display="none"
+                document.getElementById("d1").value=""
+            }
+            return (<div>
+                <input type="text" id="d1"/>
+                <button onClick={()=>add()} id="del"> ADD</button>    
+                <button onClick={()=>alter()} style={{display:"none"}}id="upt"> alter</button>    
+                <ul>
+                    {
+                        t.map((t,i)=>(<li>{t} 
+                            <button onClick={()=>abc(i)} >done</button>  
+                            <button onClick={()=>update(i)} >update</button>
+                            </li>))
+                    }
+                </ul>           
+                </div>)
+         }
+         ReactDOM.render(<Todolist/>,document.getElementById("d"))
+        </script>
+    </body>
+</html>

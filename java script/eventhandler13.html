@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div onclick="abc()">
+
+        </div>
+        <script>
+            var x=document.querySelector("div")
+            var y=document.createElement('h1')
+            y.innerHTML=(" ")
+            x.appendChild(y)
+            var y=["red","blue","black","green"]
+            var i=0
+            x.style.backgroundColor=y[i]
+            function abc()
+            {
+                
+                x.style.backgroundColor=y[i]
+                i=(i+1)%y.length
+            }    
+            x.style.height="350px"
+            x.style.width="550px"
+            x.style.border="5px solid"
+        </script>
+    </body>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>    
+    </head>
+    <body>
+        <div id="d1">
+        
+        </div>
+        <script type="text/babel">
+             const ar=["sunday","Monday","Tuesday","wednesday","Thursday","Friday","Saturday"]
+            
+            
+            var Time=()=>{
+                
+                var a= new Date()                
+                var [year,setyear]=React.useState(a.getDate()+"-"+a.getMonth().toString()+"-"+a.getFullYear()+"-"+ar[a.getDay()].toUpperCase())
+                var [time,settime]=React.useState(a.getHours()+":"+a.getMinutes()+":"+a.getSeconds())
+                setInterval(()=>{
+                    var a= new Date() 
+                    settime(a.getHours()+":"+a.getMinutes()+":"+a.getSeconds())
+                    console.log(time)
+                },1000)
+                
+                return (<div style={{textAlign:"center"}}>
+                            <h1>{time}</h1>
+                            <h1>{year}</h1>
+                            
+                            
+
+                        </div>)
+            }
+            ReactDOM.render(<Time/>,document.getElementById("d1"))
+        </script>
+    </body>
+  </html>

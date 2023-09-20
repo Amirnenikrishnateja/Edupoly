@@ -1,0 +1,31 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="div box">
+
+        </div>
+    <script>
+        var button=document.createElement("button")
+        button.innerHTML="on"
+        button.style.width="100px"
+        button.style.height="100px"
+        var divbox=document.getElementById("div box")
+        divbox.appendChild(button)
+        let ar=["on","of"]
+        var i=0
+        button.onclick=function(){
+            
+            /*button.innerHTML=ar[i]
+            i=(i+1)%ar.length*/
+            if(button.innerHTML==="on")
+            {
+                button.innerHTML="of"
+            }
+            else{
+                button.innerHTML="on"
+            }
+        }
+    </script>
+    </body>
+</html>

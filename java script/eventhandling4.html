@@ -1,0 +1,20 @@
+<html>
+    <haead></haead>
+    <body>
+        <button onclick="green(event)">toogle</button>
+        <script>
+            function green(ev){
+                if(ev.target.innerHTML==="white")
+                {
+                   ev.target.innerHTML="green"
+                   ev.target.style.backgroundColor="green"
+                }
+                else
+                {
+                    ev.target.innerHTML="white"
+                    ev.target.style.backgroundColor=""
+                }   
+            }    
+        </script>
+    </body>
+</html>

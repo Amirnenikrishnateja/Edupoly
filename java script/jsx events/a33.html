@@ -1,0 +1,36 @@
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <script type="text/babel">
+        var ar=[]
+        function div() 
+        
+    {   var div= <div>
+            <input id="a" type="text"/>
+            <button onClick={rad}>add push value</button>
+            <ul>
+                {
+                    ar.map((a,i)=><li>{a} <button onClick={()=>rad1(i)}>del</button></li>)
+                }
+             </ul>
+            </div>
+            ReactDOM.render(div,document.body)}
+    div()
+        
+    function rad()
+    {
+        ar.push(document.getElementById("a").value)
+        div()
+    }
+    function rad1(i){
+        ar.splice(i,1)
+        div()
+    }
+    
+    </script>
+</body>
+</html>

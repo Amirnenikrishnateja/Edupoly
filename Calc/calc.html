@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="calculatorstyles.css"/>
+    </head>
+    <body>
+        <div class="container">
+             <div class="display">
+                <input type="text" id="input" />
+             </div>
+             <div class="num-pad">
+                <ul>
+                    <li><button onclick="num(1)">1</button></li>
+                    <li><button onclick="num(2)">2</button></li>
+                    <li><button onclick="num(3)">3</button></li>
+                    <li><button onclick="AC()">AC</button></li>
+                </ul>
+                <ul>
+                    <li onclick="num(4)"><button>4</button></li>
+                    <li onclick="num(5)"><button>5</button></li>
+                    <li onclick="num(6)"><button>6</button></li>
+                    <li onclick="A()"><button>+</button></li>
+                </ul>
+                <ul>
+                    <li onclick="num(7)"><button>7</button></li>
+                    <li onclick="num(8)"><button>8</button></li>
+                    <li onclick="num(9)"><button>9</button></li>
+                    <li onclick="S()"><button>-</button></li>
+                </ul>
+                <ul>
+                    <li onclick="num()"><button>.</button></li>
+                    <li onclick="num(0)"><button>0</button></li>
+                    <li onclick=""><button>=</button></li>
+                    <li onclick="M()"><button>*</button></li>
+                </ul>
+                <ul>
+                    <li><button>(</button></li>
+                    <li><button>)</button></li>
+                    <li><button oncllick="P()">%</button></li>
+                    <li><button oncllick="D()">/</button></li>
+                </ul>
+             </div>
+        </div>
+        <script>
+             var ar=[]
+            function num(a){
+                document.getElementById("input").value=(document.getElementById("input").value+a)
+            }
+            function AC(){
+                document.getElementById("input").value=""
+            }
+            function S(){
+                document.getElementById("input").value=(document.getElementById("input").value+"-")
+            }
+            function A(){
+                document.getElementById("input").value=(document.getElementById("input").value+"+")
+                ar.push(document.getElementById("input").value)
+            }
+            function M(){
+                document.getElementById("input").value=(document.getElementById("input").value+"*")
+            }
+            function D(){
+                document.getElementById("input").value=(document.getElementById("input").value+"/")
+            }
+            function P(){
+                document.getElementById("input").value=(document.getElementById("input").value+"%")
+            }
+            function e(){
+                
+            }
+        </script>
+    </body>
+</html>

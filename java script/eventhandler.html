@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+    </body>
+    <script>
+        var ar=[12,13,14,15,17,4]
+        ar.sort(function(a,b){
+          if(a>b){
+            return 1
+          }
+          else{
+            return-1
+          }
+        })
+        console.log(ar)
+        var i=ar[0]
+        for(i;i<=ar[ar.length-1];i++)
+        {
+          for(var j=0;j<ar.length;j++)
+          {
+            var count=0
+            if(i==ar[j])
+            {
+              count++
+              break
+            }
+          }
+            if(count!=1)
+            {
+              console.log(i)
+            }
+
+          
+        }
+
+    </script>
+</html>

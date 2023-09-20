@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>    
+    </head>
+    <body>
+        <div id="d1">
+        
+        </div>
+        <script type="text/babel">
+            var b
+            var Time=()=>{
+                var [mins,setmins]=React.useState(0)
+                var [secs,setsecs]=React.useState(0)
+                
+                function start(){
+                    b=setInterval(()=>{                          
+                        if(secs<60)
+                        {
+                            
+                            setsecs(secs++)
+                        
+
+                        }
+                        else{
+                            secs=0 
+                        }
+                    },1000)
+                
+                
+                    
+                }
+                function KT(){
+                    clearInterval(b);
+                }
+                function S(){
+                    clearInterval(b);
+                    setsecs(0)
+                    setmins(0)
+                }
+                return (<div>
+                            <span>{mins}</span>
+                            <span>:</span>
+                            <span>{secs}</span>
+                            <br/>
+                            <button onClick={()=>start()}>start</button>
+                            <button onClick={()=>S()}>stop</button>
+                            <button onClick={()=>KT()}>pause</button>
+
+                        </div>)
+            }
+            ReactDOM.render(<Time/>,document.getElementById("d1"))
+        </script>
+    </body>
+  </html>

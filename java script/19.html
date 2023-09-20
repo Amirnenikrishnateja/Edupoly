@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <style>
+            #details{
+            color: red;
+            text-align: center;
+            margin-bottom: 2px;
+            }
+            #box{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body style="background-color:rgba(245, 243, 94, 0.783);">
+        <div id="details">
+        <h1>ADD CONTACT CARDS</h1>
+        <label>NAME</label>
+        <input type="text" id="name">
+        <br>
+        <label for="">Phone number</label>
+        <input type="text" id="phone number">
+        <br>
+        <label >Email id</label>
+        <input type="text" id="email id">
+        <br>
+        <label>IMAGE URL</label>
+        <input type="text" id="image">
+        <br>
+        <button onclick="card()">Add CONTACT</button>
+        </div>
+        <!--<div id="box" style="margin-bottom: 20px;">
+
+        </div>-->
+        <Script>
+             
+          /*  var name=document.getElementById("name").value
+            var phonenumber=document.getElementById("phone number").value
+            var Email=document.getElementById("email id").value
+            var image=document.getElementById("image").value*/
+            function card()
+            {
+            var name=document.getElementById("name").value
+            var phonenumber=document.getElementById("phone number").value
+            var Email=document.getElementById("email id").value
+            var image=document.getElementById("image").value
+            var box=document.createElement("div")
+             var a=document.createElement("p")
+             var b=document.createElement("p")
+             var c=document.createElement("p")
+             var img=document.createElement("img")
+             console.log(b)
+                img.src=image
+                a.innerHTML=("NAME:"+name)
+                b.innerHTML=("NUMBER:"+phonenumber)
+                c.innerHTML=("EMAIL :"+Email)
+                console.log(b)
+
+                box.appendChild(img)
+                box.appendChild(a)
+                box.appendChild(b)
+                box.appendChild(c)
+                img.style.width="50px"
+                img.style.height="50px"
+                img.style.borderRadius="1000px"
+                box.style.width="600px"
+                box.style.length="600px"
+                box.style.backgroundColor="yellow"
+                box.style.border="2px solid red"
+                box.style.borderRadius="10px"
+                box.style.padding="20px"
+                box.style.margin="200px"
+                document.body.appendChild(box)
+                console.log(name,image)
+                console.log("hi")
+                console.log(phonenumber)
+             };
+            
+        </Script>

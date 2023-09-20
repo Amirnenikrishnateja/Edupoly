@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <style>
+            #details{
+            color: red;
+            text-align: center;
+            }
+        </style>
+    </head>
+    <body style="background-color:rgba(245, 243, 94, 0.783);">
+        <div id="details">
+        <h1>ADD CONTACT CARDS</h1>
+        <label>NAME</label>
+        <input type="text" id="name">
+        <br>
+        <label for="">Phone number</label>
+        <input type="text" id="phone number">
+        <br>
+        <label >Email id</label>
+        <input type="text" id="email id">
+        <br>
+        <label>IMAGE URL</label>
+        <input type="text" id="image">
+        <br>
+        <button onclick="contact()">Add CONTACT</button>
+        </div>
+        
+
+        </div>
+        <Script>
+            var ar=[]
+            var Name=document.getElementById("name")
+            var phonenumber=document.getElementById("phone number")
+            var Email=document.getElementById("email id")
+            var image=document.getElementById("image")
+            function contact(){
+               var contact_details={name:Name.value,
+                                    phonenumber:phonenumber.value,
+                                    Email:Email.value,
+                                    image:image.value}
+                ar.push(contact_details)
+
+                console.log(ar)
+                card(ar)
+
+            }
+            
+            function card(ar)
+            {
+            var div=document.createElement("div")
+            var a=document.createElement("p")
+            var b=document.createElement("p")
+            var c=document.createElement("p")
+            var img=document.createElement("img")
+            var edit=document.createElement("button")
+            var del=document.createElement("button")
+            del.innerHTML="delete"
+             edit.innerHTML="edit"
+             div.innerHTML=""
+             document.body.appendChild(div)             
+             ar.forEach(function(d,i){
+                img.src=d.image
+                a.innerHTML=("NAME:"+ar[i].name)
+                b.innerHTML=("NUMBER:"+ar[i].phonenumber)
+                c.innerHTML=("EMAIL :"+ar[i].Email)
+                c.style.display="inline-block"
+                edit.style.margin="10px"
+                del.style.margin="50px"
+                div.appendChild(img)
+                div.appendChild(del)
+                div.appendChild(a)
+                div.appendChild(b)
+                div.appendChild(c)
+                div.appendChild(edit)
+                img.style.width="50px"
+                img.style.height="50px"
+                img.style.borderRadius="1000px"
+                div.style.width="450px"
+                div.style.length="600px"
+                div.style.backgroundColor="yellow"
+                div.style.border="2px solid red"
+                div.style.borderRadius="10px"
+                div.style.padding="20px"
+                div.style.marginBottom="20px"
+                del.onclick=()=>{
+                    ar.splice(i,1)
+                    card(ar)
+                }
+                
+             }) 
+                
+             };
+            
+            
+        </Script>
+    </body>
+</html>

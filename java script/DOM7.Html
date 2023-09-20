@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var students = [		
+                                    {
+                                        "firstname": "praveen",
+                                        "age": 36,
+                                        "subjects":['angular','nodejs','reactjs','java']
+                                    }, 
+                                    {
+                                        "firstname": "srikanth",
+                                        "age": 32,
+                                        "subjects":['react','mongodb']
+                                    }, 
+                                    {
+                                        "firstname": "pradeep",
+                                        "age": 21,
+                                        "subjects":['express','mongoose','python']
+                                    }
+                            ]
+         var ol=document.createElement("ol")
+         var body=document.querySelector('body')
+         body.appendChild(ol)
+         students.forEach(function(a){
+            var li1=document.createElement("li")
+            li1.innerHTML=a.firstname
+            ol.appendChild(li1)
+            var ol1=document.createElement("ol")
+            a.subjects.forEach(function(b){
+                {
+                    var li2=document.createElement("li")
+                    li2.innerHTML=b
+                    ol1.appendChild(li2)
+                    ol.appendChild(ol1)
+                }
+            })
+            
+         }) 
+         
+           
+        </script>
+    </body>
+</html>

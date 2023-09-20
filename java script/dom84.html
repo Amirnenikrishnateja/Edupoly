@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <table id="tb" border="1px solid" cellspacing="0">
+
+        </table><br><br>
+        <table id="tb1" border="1px solid" cellspacing="0">
+
+        </table>
+        
+        <script>
+            // Generate UI using document object for the given Array of Objects.
+            var people = [
+                        {
+                        "firstname": "praveen",
+                        "lastname": "gubbala",
+                        "age": 36,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 10000
+                        },
+                        {
+                        "firstname": "srikanth",
+                        "lastname": "gubbala",
+                        "age": 32,
+                        "gender": "male",
+                        "city": "bengaluru",
+                        "salary": 20000
+                        },
+                        {
+                        "firstname": "pradeep",
+                        "lastname": "reddy",
+                        "age": 21,
+                        "gender": "male",
+                        "city": "hyd",
+                        "salary": 25000
+                        },
+                        {
+                        "firstname": "mounika",
+                        "lastname": "mudiraj",
+                        "age": 20,
+                        "gender": "female",
+                        "city": "nalgonda",
+                        "salary": 30000
+                        },
+                        {
+                        "firstname": "nikhil",
+                        "lastname": "m",
+                        "age": 22,
+                        "gender": "male",
+                        "city": "guntur",
+                        "salary": 2000
+                        },
+                        {
+                        "firstname": "riya",
+                        "lastname": "bhadouria",
+                        "age": 14,
+                        "gender": "female",
+                        "city": "indore",
+                        "salary": 40000
+                        }
+                        ];
+            
+            // Display all male and female people in two separate tables.
+
+            var x = document.querySelector("#tb");
+            var y = document.querySelector("#tb1");
+            people.forEach(function(peoples){
+                if(peoples.age>25){
+                    var a = document.createElement("tr");
+                    var b = document.createElement("td");
+                    var c = document.createElement("td");
+                    var d = document.createElement("td");
+                    var e = document.createElement("td");
+                    var f = document.createElement("td");
+                    var g = document.createElement("td");
+
+                    b.innerHTML = peoples.firstname;
+                    c.innerHTML = peoples.lastname;
+                    d.innerHTML = peoples.age;
+                    e.innerHTML = peoples.gender;
+                    f.innerHTML = peoples.city;
+                    g.innerHTML = peoples.salary;
+
+                    a.appendChild(b);
+                    a.appendChild(c);
+                    a.appendChild(d);
+                    a.appendChild(e);
+                    a.appendChild(f);
+                    a.appendChild(g);
+
+                    x.appendChild(a);
+                }
+                
+            });
+
+        </script>
+    </body>
+</html>

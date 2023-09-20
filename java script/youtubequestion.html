@@ -1,0 +1,502 @@
+<html>
+    <head>
+
+    </head>
+<body>
+    <script>
+        //youtube question no1
+        /*count=0
+        a=+prompt()
+        i=1
+        //for loop
+        /*for(i=1;i<=a;i++)
+        if(a%i==0){
+        count++
+        console.log(i)
+        }
+        console.log(count)
+        if(count>2)
+            console.log("composite number")
+        else
+            console.log("prime Number")*/
+        //while loop
+        /*while(a>=i)
+        {
+            if(a%i==0)
+            {count++
+            console.log(i)
+            }
+            i++
+        }
+        console.log(count)
+        if(count>2)
+            console.log("composite number")
+        else
+            console.log("prime Number")*/
+//2 Indudival digits of a number
+// for loop
+/*for(a=+prompt();a>0;a){
+    num=a%10
+    a=parseInt(a/10)
+    }*/
+//while loop
+/*a=+prompt()
+while(a>0){
+    num=a%10
+    a=parseInt(a/10)
+    console.log(num)
+}*/
+//3)print only even numbers
+/*for(a=+prompt();a>0;a){
+    num=a%10
+    if(num%2==0){
+        console.log(num)}
+        a=parseInt(a/10)
+    }
+    a=+prompt()*/
+/*while(a>0){
+    num=a%10
+    a=parseInt(a/10)
+    if(num%2==0){
+        console.log(num)}
+}*/
+//4)print only odd numbers
+/*for(a=+prompt();a>0;a){
+    num=a%10
+    if(num%2!=0){
+        console.log(num)}
+        a=parseInt(a/10)
+    }
+    a=+prompt()
+while(a>0){
+    num=a%10
+    a=parseInt(a/10)
+    if(num%2!=0){
+        console.log(num)}
+}*/
+//5)print number of digits
+/*count=0
+for(a=+prompt();a>0;a){
+    num=a%10
+    if(num>=0){
+        count++}
+        a=parseInt(a/10)
+    }
+    console.log(count)
+ a=+prompt()
+    count=0
+while(a>0){
+    num=a%10
+    a=parseInt(a/10)
+    if(num>=0){
+        count++}
+}
+console.log(count)*/
+//6)print number of 1
+/*count=0
+for(a=+prompt();a>0;a){
+    num=a%10
+    if(num=1){
+        count++}
+        a=parseInt(a/10)
+    }
+    console.log(count)*/
+/*  a=+prompt()
+    count=0
+while(a>0){
+    num=a%10
+    a=parseInt(a/10)
+    if(num=1){
+        count++}
+}
+console.log(count)
+*/
+//7)print digits less than 5 in a given number
+/*for(a=+prompt();a>0;a){
+    num=a%10
+    if(num<5){
+        console.log(num)}
+        a=parseInt(a/10)
+    }
+    
+ a=+prompt()
+while(a>0){
+    num=a%10
+    a=parseInt(a/10)
+    if(num<5){
+        console.log(num)}
+}
+*/
+//8)Armstrong number
+//for loop
+/*count=0
+res=0
+var a=+prompt()
+d=a
+t=a
+for(var a;a>0;a)
+{
+    b=a%10
+    count++
+    a=parseInt(a/10)
+}
+for(var d;d>0;d)
+{
+    b=d%10
+    d=parseInt(d/10)
+    res=res+(b**count)
+
+}
+console.log(res)
+    if(res==t)
+    console.log("it is a armstrong number")
+    else
+     console.log("it is not a armstrong number")
+//while loop
+count=0
+res=0
+var a=+prompt()
+d=a
+t=a
+while(a>0){
+    b=a%10
+    a=parseInt(a/10)
+    if(a>=0)
+    count++
+}
+while(t>0){
+    b=t%10
+    t=parseInt(t/10)
+    res=res+b**count}
+    console.log(res)
+    if(res===d)
+    console.log("it is a armstrong number")
+    else
+    console.log("it is not a armstrong number")*/
+
+//8)digits at 10's place
+//for loop
+/*a=+prompt()
+i=1
+for(i;i<=1;i++){
+    var b=parseInt(a/10)}
+    console.log(b%10)*/
+//while loop
+/*a=+prompt()
+i=1
+while(i<=1){
+    var b=parseInt(a/10)
+i++}
+    console.log(b%10)*/
+/*a=+prompt()
+b=a
+rev=0
+count=0
+for(a;a>0;a){
+    a=parseInt(a/10)
+    count++}
+    count=count-1
+for(b;b>0;b){
+    c=b%10
+    b=parseInt(b/10)
+    rev=rev+(c*(10**count))
+    count--
+    }
+console.log(rev)*/
+/*a=+prompt()
+b=a
+rev=0
+count=0
+while(a>0){
+    a=parseInt(a/10)
+    count++}
+    count=count-1
+while(b>0){
+    c=b%10
+    b=parseInt(b/10)
+    rev=rev+(c*(10**count))
+    count--
+    }
+console.log(rev)*/
+//or
+//for loop
+/*b=+prompt()
+rev=0
+for(b;b>0;b){
+    c=b%10
+    b=parseInt(b/10)
+    rev=rev*10+c
+    }
+console.log(rev)*/
+//while
+/*b=+prompt()
+rev=0
+while(b>0){
+    c=b%10
+    b=parseInt(b/10)
+    rev=rev*10+c
+    }
+console.log(rev)*/
+//palimndrone
+/*b=+prompt()
+c=b
+rev=0
+for(b;b>0;b){
+    d=b%10
+    b=parseInt(b/10)
+    rev=rev*10+d
+    }
+if(c==rev)
+    console.log("it is a palimdrone numebr")
+else
+    console.log("it is not palimdrone numebr")*/
+/*0b=+prompt()
+c=b
+rev=0
+while(b>0){
+    d=b%10
+    b=parseInt(b/10)
+    rev=rev*10+d
+    }
+if(c==rev)
+    console.log("it is a palimdrone numebr")
+else
+    console.log("it is not palimdrone numebr")*/
+//sum of all digits
+/*    b=+prompt()
+c=b
+rev=0
+for(b;b>0;b){
+    d=b%10
+    b=parseInt(b/10)
+    rev=rev+d
+    }
+console.log(rev)*/
+/*b=+prompt()
+c=b
+rev=0
+while(b>0){
+    d=b%10
+    b=parseInt(b/10)
+    rev=rev+d
+    }
+console.log(rev)*/
+//greatest number
+/*b=+prompt()
+c=-Infinity
+rev=0
+for(b;b>0;b){
+    d=b%10
+    b=parseInt(b/10)
+    if(d>c)
+    c=d
+    }
+console.log(c)*/
+/*b=+prompt()
+c=-Infinity
+rev=0
+while(b>0){
+    d=b%10
+    b=parseInt(b/10)
+    if(d>c)
+    c=d
+    }
+console.log(c)*/
+//octal to decimal
+/*var a=+prompt()
+var digit=0;
+var i=0;
+while(a>0){
+b=a%10
+a=parseInt(a/10)
+digit=digit+(b*(8**i))
+i++}
+console.log(digit)*/
+//for loop
+/*var a=+prompt()
+var digit=0;
+var i=0;
+for(a;a>0;a){
+b=a%10
+a=parseInt(a/10)
+digit=digit+(b*(8**i))
+i++}
+console.log(digit)*/
+//binary to decimal
+/*var a=+prompt()
+var digit=0;
+var i=0;
+while(a>0){
+b=a%10
+a=parseInt(a/10)
+digit=digit+(b*(2**i))
+i++}
+console.log(digit)*/
+/*var a=+prompt()
+var digit=0;
+var i=0;
+for(a;a>0;a){
+b=a%10
+a=parseInt(a/10)
+digit=digit+(b*(8**i))
+i++}
+console.log(digit)*/
+//lCM
+/*a=+prompt()
+b=+prompt()
+if(a>b)
+{
+    large=a
+    small=b
+}
+else
+{
+    large=b
+    small=a
+}
+var i=large
+for(large;large%small!==0;large)
+        large=large+i
+    console.log(large)*/
+/*    a=+prompt()
+    b=+prompt()
+if(a>b)
+{
+    large=a
+    small=b
+}
+else
+{
+    large=b
+    small=a
+}
+var i=large
+while(large%small!==0)
+        large=large+i
+    console.log(large)*/
+//sum of numbers
+/*sum=0
+for(var i=1;i<=10;i++)
+sum=sum+i
+console.log(sum)*/
+/*sum=0
+i=1
+while(i<=10){
+sum=sum+i
+i++}
+console.log(sum)*/
+//average number
+/*sum=0
+for(var i=1;i<=10;i++)
+sum=sum+i
+console.log(sum/(i-1))*/
+/*sum=0
+i=1
+while(i<=10){
+sum=sum+i
+i++}
+console.log(sum/(i-1))*/
+//sum of even numbers
+/*sum=0
+for(var i=1;i<=10;i++)
+{if(i%2===0)
+sum=sum+i
+}
+console.log(sum)
+sum=0
+i=1
+while(i<=10){
+if(i%2==0){
+sum=sum+i
+}
+i++}
+console.log(sum)*/
+//odd numbers
+/*sum=0
+for(var i=1;i<=10;i++)
+{if(i%2!==0)
+sum=sum+i
+}
+console.log(sum)
+sum=0
+i=1
+while(i<=10){
+if(i%2!=0){
+sum=sum+i
+}
+i++}
+console.log(sum)*/
+//product of n numbers
+/*m=1
+var n=+prompt()
+i=1
+for(i;i<=n;i++){
+m=m*i}
+console.log(m)*/
+/*m=1
+var n=+prompt()
+i=1
+while(i<=n){
+m=m*i
+i++}
+console.log(m)*/
+//nth power
+/*var m=1
+a=+prompt()
+b=+prompt()
+for(b;b>0;b--){
+    m=m*a
+}
+    console.log(m)
+    var m=1
+a=+prompt()
+b=+prompt()
+while(b>0){
+    m=m*a
+    b--
+}
+    console.log(m)*/
+//ncr
+/*var a=+prompt()
+var b=+prompt()
+afact=1
+bfact=1
+dfact=1
+for(i=1;i<=a;i++)
+    afact=afact*i
+for(i=1;i<=b;i++)
+    bfact=bfact*i
+for(i=1;i<=(a-b);i++)
+    dfact=dfact*i
+ncr=(afact/(bfact*dfact))
+console.log(ncr)*/
+/*var a=+prompt()
+var b=+prompt()
+afact=1
+bfact=1
+dfact=1
+i=1
+while(i<=a){
+    afact=afact*i
+    i++}
+i=1
+while(i<=b){
+    bfact=bfact*i
+    i++}
+i=1
+while(i<=(a-b)){
+    dfact=dfact*i
+    i++
+}
+ncr=(afact/(bfact*dfact))
+console.log(ncr)*/
+i=1
+a=+prompt()
+sum=0
+
+for(i;a%i==0;i++)
+    sum++
+console.log(sum)
+     </script>
+</body>
+</html>

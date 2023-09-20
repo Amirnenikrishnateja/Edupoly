@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <script type="text/babel">
+        
+        function rad(){
+            document.getElementById('h1').innerHTML=++a
+            
+        }
+        function rad1(){
+            document.getElementById('h1').innerHTML=--a
+            
+        }
+        function rad2(){
+            document.getElementById('h1').innerHTML=b
+            
+        }
+    var a=120
+    var b=a
+    var div=<div>
+            
+            <h1 id="h1">{a}</h1>
+            <button onClick={rad}>+1</button>
+            <button onClick={rad1}>-1</button>
+            <button onClick={rad2}>reset</button>
+            
+            </div>
+    ReactDOM.render(div,document.body)
+    </script>
+</body>
+</html>
