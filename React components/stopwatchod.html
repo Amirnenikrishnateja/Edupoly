@@ -13,41 +13,69 @@
             var Time=()=>{
                 var [mins,setmins]=React.useState(0)
                 var [secs,setsecs]=React.useState(0)
+                var [millisecs,setmillisecs]=React.useState(0)
+                var [list,setlist]=React.useState([])
                 
                 function start(){
                     b=setInterval(()=>{                          
-                        if(secs<60)
+                        if(millisecs==1000)
                         {
                             
-                            setsecs(secs++)
+                            millisecs=0 
+                            setsecs(++secs)
+                        }
                         
-
-                        }
                         else{
-                            secs=0 
+                            setmillisecs(++millisecs)
+                            
                         }
-                    },1000)
+                        if(secs===59)
+                        {
+                            secs=0
+                            setmins(++mins)
+                        }
+                        document.getElementById("2").style.display="block"
+                        document.getElementById("3").style.display="block"
+                        document.getElementById("1").style.display="none"
+                    },0)
                 
                 
                     
                 }
                 function KT(){
                     clearInterval(b);
+                    document.getElementById("1").style.display="block"
+                    document.getElementById("3").style.display="none"
+                    
+                    
                 }
                 function S(){
                     clearInterval(b);
                     setsecs(0)
                     setmins(0)
+                    setmillisecs(0)
+                    document.getElementById("1").style.display="block"
+                    document.getElementById("3").style.display="none"
+                    document.getElementById("2").style.display="none"
                 }
-                return (<div>
-                            <span>{mins}</span>
-                            <span>:</span>
-                            <span>{secs}</span>
-                            <br/>
-                            <button onClick={()=>start()}>start</button>
-                            <button onClick={()=>S()}>stop</button>
-                            <button onClick={()=>KT()}>pause</button>
-
+                
+                return (<div style={{display:'flex',flexDirection:'column',
+            justifyContent:'center',alignItems:'center',
+            border:"2px solid",width:"350px",margin:" 0 auto",padding:"20px"}}>
+                            <div style={{display:'flex'}}>
+                            <h1>{(mins>=10?mins:("0"+mins))}</h1>
+                            <h1>:</h1>
+                            <h1>{(secs>=10?secs:("0"+secs))}</h1>
+                            <h1>:</h1>
+                            <h1>{(millisecs<10?"00"+millisecs:(millisecs>=10&&millisecs<100)?"0"+millisecs:millisecs)}</h1>
+                            </div>
+                            <div style={{display:'flex'}}>
+                            <button id="1" onClick={()=>start()}>start</button>&nbsp;
+                            <button id="2" style={{display:"none"}}onClick={()=>S()}>stop</button>&nbsp;
+                            <button id="3" style={{display:"none"}}onClick={()=>KT()}>pause</button>&nbsp;
+                            </div>
+                            <ul>
+                            </ul>
                         </div>)
             }
             ReactDOM.render(<Time/>,document.getElementById("d1"))
