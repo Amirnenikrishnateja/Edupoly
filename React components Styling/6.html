@@ -1,0 +1,73 @@
+<html>
+    <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .male{
+            background-color: aqua;
+        }
+        .female{
+            background-color:pink;
+        }
+    </style>
+    </head>
+    <body>
+        <script type="text/babel">
+            var KT=()=>{
+            var [students, setStudents] = React.useState([
+                {
+                    firstname: "Praveen",
+                    lastname: "Gubbala",
+                    age: 40,
+                    gender: "male"
+                },
+                {
+                    firstname: "Smrithi",
+                    lastname: "mandana",
+                    age: 25,
+                    gender: 'female'
+                },
+                {
+                    firstname: "mithali",
+                    lastname: "raj",
+                    age: 39,
+                    gender: 'female'
+                },
+                {
+                    firstname: "Rohit",
+                    lastname: "Sharma",
+                    age: 35,
+                    gender: 'male'
+                },
+                {
+                    firstname: "Sachin",
+                    lastname: "Tendulkar",
+                    age: 50,
+                    gender: 'male'
+                },
+            ])
+            const maleimage = "https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg";
+            const femaleimage = "https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png";
+            
+                return (<div style={{display:"flex",flexWrap:"wrap"}}>
+                        {
+                            students.map(a=>
+                           { return(<div  style={{border:"2px solid",margin:"20px",display:"flex",padding:"20px"}} >
+                            <div class={a.gender==="male"?"male":"female"}>
+                            <h1 >{ "first name :"+a.firstname}</h1>
+                            <h1 >{"lastname "+a.lastname}</h1>
+                            <h1 >{"age :"+a.age}</h1>
+                            <h1 >{"gender :"+a.gender}</h1>
+                            </div>
+                            <div style={{width:"150px"}}><img src={a.gender="male"?maleimage:femaleimage} width="100%"/></div>
+                            </div>)})
+                            
+                        }
+                    </div>)
+                
+            }
+            ReactDOM.render(<KT/>,document.body)
+        </script>
+    </body>
+</html>

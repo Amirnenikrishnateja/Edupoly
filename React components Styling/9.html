@@ -1,0 +1,79 @@
+<html>
+    <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .male{
+            background-color: blue;
+        }
+        .female{
+            background-color:pink;
+        }
+    </style>
+    </head>
+    <body>
+        <script type="text/babel">
+         
+            var KT=()=>{
+            var [s, sets] = React.useState([
+                {
+                    firstname: "Praveen",
+                    lastname: "Gubbala",
+                    age: 40,
+                    gender: "male"
+                },
+                {
+                    firstname: "Smrithi",
+                    lastname: "mandana",
+                    age: 25,
+                    gender: 'female'
+                },
+                {
+                    firstname: "mithali",
+                    lastname: "raj",
+                    age: 39,
+                    gender: 'female'
+                },
+                {
+                    firstname: "Rohit",
+                    lastname: "Sharma",
+                    age: 35,
+                    gender: 'male'
+                },
+                {
+                    firstname: "Sachin",
+                    lastname: "Tendulkar",
+                    age: 50,
+                    gender: 'male'
+                },
+            ])
+            
+                  return (<div >
+                        <table>
+                            <thead>
+                                <th>FNAME</th>
+                                <th>LNAME</th>
+                                <th>AGE</th>
+                                <th>GENDER</th>
+                            </thead>
+                            {s.map(a=>{
+                                return <tr class={a.gender==="female"?"female":null}>
+                                    <td>{a.firstname}</td>
+                                    <td>{a.lastname}</td>
+                                    <td>{a.age}</td>
+                                    <td >{a.gender}</td>
+                                    </tr>
+                            })}
+                        </table>
+                            
+                           
+                        
+                    </div>)
+                
+            }
+            
+            ReactDOM.render(<KT/>,document.body)
+        </script>
+    </body>
+</html>
