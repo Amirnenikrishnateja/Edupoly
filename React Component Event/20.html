@@ -12,24 +12,32 @@
     var A = function () {
         var[b,setb]=React.useState([])
         var a = (e) => {
-            if(e.target.checked===false)
+            console.log(e)
+            if(e.target.checked!==true)
             {
-                var up=b.filter(b=>b!==target.value)
+                setb(b.filter(box=>box!=e.target.value))
+                
             }
-           setb(e.target.value)
+            else
+            {
+                setb([...b,e.target.value])
+            }
            
+          var ar= [1,2,3,4,5,6]
+          console.log(ar.filter(a=>a!==4))
+          
         }
         var c=()=>{
             setb(document.getElementById('a').value-document.getElementById('b').value)
         }
         return (
             <div>
-                <input type="checkbox" value="a"/>a
-                <input type="checkbox" value="b"/>b
-                <input type="checkbox" value="c"/>c
-                <input type="checkbox" value="d"/>d
-                <input type="checkbox" value="e"/>e
-                <h1>{b}</h1>
+                <input type="checkbox" value="a" onClick={a}/>a
+                <input type="checkbox" value="b" onClick={a}/>b
+                <input type="checkbox" value="c" onClick={a}/>c
+                <input type="checkbox" value="d" onClick={a}/>d
+                <input type="checkbox" value="e" onClick={a}/>e
+                <h1>{b.join(",")}</h1>
             </div>
                
            
